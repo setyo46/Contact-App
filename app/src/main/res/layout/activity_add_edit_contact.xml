@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddEditContact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+
+        <!-- gambar lingkaran untuk gambar profil -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_person_24"
+            app:civ_border_width="@dimen/_5sdp"
+            app:civ_border_color="@color/colorTextExtra"
+            app:civ_circle_background_color="@color/colorTextExtra"
+            android:padding="@dimen/_5sdp"/>
+
+        <!-- editText for input -->
+        <EditText
+            android:id="@+id/nameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_text_fields_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorTextExtra"
+            android:textSize="@dimen/_14sdp" />
+
+
+        <EditText
+            android:id="@+id/phoneEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorTextExtra"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorTextExtra"
+            android:textSize="@dimen/_14sdp" />
+
+        <EditText
+            android:id="@+id/noteEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/background_input_field"
+            android:drawableStart="@drawable/ic_baseline_note_24"
+            android:drawablePadding="@dimen/_5sdp"
+            android:hint="Note"
+            android:inputType="textLongMessage"
+            android:padding="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorTextExtra"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+    <!-- tombol FAB untuk menambahkan data ke database -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="30dp"
+        android:contentDescription="TODO"
+        android:elevation="@dimen/_5sdp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/colorTextPrimary"
+        app:pressedTranslationZ="@dimen/_10sdp"
+        app:tint="@color/white" />
+
+</RelativeLayout>
